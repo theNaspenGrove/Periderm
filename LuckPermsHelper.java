@@ -9,19 +9,8 @@ import org.bukkit.entity.Player;
 import static net.mov51.neworigin.NewOrigin.LPapi;
 
 public class LuckPermsHelper {
-    public enum MetaKey {
-        topLevelMetaKey("NewOrigin_"),
 
-        Origin(topLevelMetaKey.key + "Origin");
-
-        final String key;
-
-        MetaKey(String key){
-            this.key = key;
-        }
-    }
-
-    public static String getMetaValue(Player p, MetaKey metaKey){
+    public static String getMetaValue(Player p, AspenMetaKey metaKey){
         // obtain CachedMetaData - the easiest way is via the PlayerAdapter
         // of course, you can get it via a User too if the player is offline.
         CachedMetaData metaData = LPapi.getPlayerAdapter(Player.class).getMetaData(p);
@@ -30,7 +19,7 @@ public class LuckPermsHelper {
         return metaData.getMetaValue(metaKey.key);
     }
 
-    public static void setMetaValue(Player p, MetaKey metaKey, String value){
+    public static void setMetaValue(Player p, AspenMetaKey metaKey, String value){
         // obtain a User instance (by any means! see above for other ways)
         User user = LPapi.getPlayerAdapter(Player.class).getUser(p);
 
