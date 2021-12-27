@@ -1,4 +1,4 @@
-package net.mov51.periderm.helperObjects;
+package net.mov51.periderm.paper;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;

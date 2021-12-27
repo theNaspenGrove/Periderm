@@ -1,4 +1,4 @@
-package net.mov51.periderm.helperObjects;
+package net.mov51.periderm.luckPerms;
 
 public class AspenMetaKey {
 

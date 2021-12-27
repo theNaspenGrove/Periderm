@@ -1,8 +1,7 @@
-package net.mov51.periderm;
+package net.mov51.periderm.paper;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
-import net.mov51.periderm.helperObjects.ChatPrefix;
 import org.bukkit.entity.Player;
 
 public class ChatHelper {

@@ -1,10 +1,9 @@
-package net.mov51.periderm;
+package net.mov51.periderm.luckPerms;
 
 import net.luckperms.api.cacheddata.CachedMetaData;
 import net.luckperms.api.model.user.User;
 import net.luckperms.api.node.matcher.NodeMatcher;
 import net.luckperms.api.node.types.MetaNode;
-import net.mov51.periderm.helperObjects.AspenMetaKey;
 import org.bukkit.entity.Player;
 
 import static net.mov51.neworigin.NewOrigin.LPapi;
