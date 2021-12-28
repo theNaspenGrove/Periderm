@@ -1,4 +1,4 @@
-package net.mov51.periderm.paper;
+package net.mov51.periderm;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
