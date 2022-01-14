@@ -1,9 +1,6 @@
 package net.mov51.periderm.paper.chat;
 
-import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
-import net.kyori.adventure.text.format.NamedTextColor;
-import net.kyori.adventure.text.format.TextDecoration;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 
 public class ChatPrefix {
@@ -13,15 +10,7 @@ public class ChatPrefix {
 
     public ChatPrefix(String prefix){
         basicPrefix = prefix;
-        componentPrefix = Component.text("[")
-                .color(NamedTextColor.GOLD)
-                .decoration(TextDecoration.BOLD, true)
-                .append(LegacyComponentSerializer.legacyAmpersand().deserialize(prefix)
-                        .color(NamedTextColor.DARK_GREEN)
-                        .decoration(TextDecoration.BOLD, false))
-                .append(Component.text("] ")
-                        .color(NamedTextColor.GOLD)
-                        .decoration(TextDecoration.BOLD, true));
+        componentPrefix = LegacyComponentSerializer.legacyAmpersand().deserialize(prefix);
     }
 
     public TextComponent getComponent(){
