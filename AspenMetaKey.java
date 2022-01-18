@@ -1,14 +1,11 @@
-package net.mov51.periderm.luckPerms;
+package net.mov51.periderm.luckperms;
 
 public class AspenMetaKey {
 
-    String topLevelKey;
-
     private final String key;
 
-    public AspenMetaKey(String topLevelKey, String key){
+    public AspenMetaKey(String key){
         this.key = key;
-        this.topLevelKey = topLevelKey;
     }
 
     public String getKey(){
