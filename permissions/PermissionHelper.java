@@ -24,6 +24,11 @@ public class PermissionHelper {
         return false;
     }
 
+    public boolean hasPermissionSilent(Player p, Perm perm){
+        return p.hasPermission(topLevelPermissionNode + perm.getPermissionNode());
+    }
+
+
     public PredefinedMessage getDefaultDenyMessage() {
         return defaultDenyMessage;
     }
