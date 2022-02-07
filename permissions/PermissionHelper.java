@@ -16,16 +16,20 @@ public class PermissionHelper {
         this.defaultDenyMessage = defaultDenyMessage;
     }
 
-    public boolean hasPermission(Player p, Perm perm){
+    public boolean hasPermission(Player p, Perm perm, boolean silent){
         if(p.hasPermission(topLevelPermissionNode + perm.getPermissionNode())){
             return true;
+        }
+        if(silent){
+            return false;
         }
         chatHelper.sendChat(p,perm.hasMessage() ? perm.getDenyMessage() : this.getDefaultDenyMessage());
         return false;
     }
 
-    public boolean hasPermissionSilent(Player p, Perm perm){
-        return p.hasPermission(topLevelPermissionNode + perm.getPermissionNode());
+    public boolean hasPermission(Player p, Perm perm){
+        return hasPermission(p,perm,false);
+
     }
 
 
