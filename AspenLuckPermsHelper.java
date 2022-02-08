@@ -3,6 +3,7 @@ package net.mov51.periderm.luckperms;
 import net.luckperms.api.LuckPerms;
 import net.luckperms.api.cacheddata.CachedMetaData;
 import net.luckperms.api.model.user.User;
+import net.luckperms.api.node.NodeType;
 import net.luckperms.api.node.matcher.NodeMatcher;
 import net.luckperms.api.node.types.MetaNode;
 import org.bukkit.Bukkit;
@@ -37,6 +38,17 @@ public class AspenLuckPermsHelper {
 
         // query & parse the meta value
         return metaData.getMetaValue(this.getTopLevelMetaKey() + aspenMetaKey.getKey());
+    }
+
+    public boolean hasMetaValue(Player p, AspenMetaKey aspenMetaKey){
+        User user = LPapi.getPlayerAdapter(Player.class).getUser(p);
+        // obtain CachedMetaData - the easiest way is via the PlayerAdapter
+        // of course, you can get it via a User too if the player is offline.
+        CachedMetaData metaData = LPapi.getPlayerAdapter(Player.class).getMetaData(p);
+
+        // query & parse the meta value
+        return user.resolveInheritedNodes(NodeType.META, user.getQueryOptions())
+                .stream().anyMatch(NodeMatcher.metaKey(aspenMetaKey.getKey()));
     }
 
     public void setMetaValue(Player p, AspenMetaKey aspenMetaKey, String value){
