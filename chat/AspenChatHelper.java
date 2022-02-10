@@ -43,26 +43,58 @@ public class AspenChatHelper {
                 .build());
     }
 
+    //Default - Underlined & Dark Aqua
     public TextComponent buildRunCommandComponent(String message, String command){
-        return LegacyComponentSerializer.legacyAmpersand().deserialize(message)
-                .clickEvent(ClickEvent.runCommand(command));
+        return buildRunCommandComponent(message,command,true);
     }
 
+    //Underlined & custom color
+    public TextComponent buildRunCommandComponent(String message, String command, NamedTextColor color){
+        return buildRunCommandComponent(message,command,true,color);
+    }
+
+    //Optionally underlined & Dark Aqua
     public TextComponent buildRunCommandComponent(String message, String command, boolean underlined){
-        return buildRunCommandComponent(message,command)
-                .color(TextColor.color(NamedTextColor.DARK_AQUA))
-                .decoration(TextDecoration.UNDERLINED,underlined);
+        return buildRunCommandComponent (message, command, underlined,NamedTextColor.DARK_AQUA);
     }
 
+    //optionally underlined & custom color
+    public TextComponent buildRunCommandComponent(String message, String command, boolean underlined, NamedTextColor color){
+
+        TextComponent out = LegacyComponentSerializer.legacyAmpersand().deserialize(message)
+                .clickEvent(ClickEvent.runCommand(command))
+                .decoration(TextDecoration.UNDERLINED,underlined);
+        if(color != null){
+            out = out.color(TextColor.color(color));
+        }
+        return out;
+    }
+
+
+    //Default - Underlined & Dark Aqua
     public TextComponent buildSuggestCommandComponent(String message, String command){
-        return LegacyComponentSerializer.legacyAmpersand().deserialize(message)
-                .clickEvent(ClickEvent.suggestCommand(command));
+        return buildSuggestCommandComponent(message,command,true);
     }
 
+    //Underlined & custom color
+    public TextComponent buildSuggestCommandComponent(String message, String command,NamedTextColor color){
+        return buildSuggestCommandComponent(message,command,true,color);
+    }
+
+    //Optionally underlined & Dark Aqua
     public TextComponent buildSuggestCommandComponent(String message, String command,boolean underlined){
-        return buildSuggestCommandComponent(message,command)
-                .color(TextColor.color(NamedTextColor.DARK_AQUA))
+        return buildSuggestCommandComponent(message,command,underlined,NamedTextColor.DARK_AQUA);
+    }
+
+    //optionally underlined & custom color
+    public TextComponent buildSuggestCommandComponent(String message, String command,boolean underlined,NamedTextColor color){
+        TextComponent out = LegacyComponentSerializer.legacyAmpersand().deserialize(message)
+                .clickEvent(ClickEvent.suggestCommand(command))
                 .decoration(TextDecoration.UNDERLINED,underlined);
+        if(color != null){
+            out = out.color(TextColor.color(color));
+        }
+        return out;
     }
 
     public void sendBarMessage(Player p){
