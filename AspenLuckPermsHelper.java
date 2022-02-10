@@ -42,13 +42,21 @@ public class AspenLuckPermsHelper {
 
     public boolean hasMetaValue(Player p, AspenMetaKey aspenMetaKey){
         User user = LPapi.getPlayerAdapter(Player.class).getUser(p);
-        // obtain CachedMetaData - the easiest way is via the PlayerAdapter
-        // of course, you can get it via a User too if the player is offline.
-        CachedMetaData metaData = LPapi.getPlayerAdapter(Player.class).getMetaData(p);
 
         // query & parse the meta value
         return user.resolveInheritedNodes(NodeType.META, user.getQueryOptions())
                 .stream().anyMatch(NodeMatcher.metaKey(aspenMetaKey.getKey()));
+    }
+
+    public void clearMetaValue(Player p, AspenMetaKey aspenMetaKey){
+        // obtain a User instance (by any means! see above for other ways)
+        User user = LPapi.getPlayerAdapter(Player.class).getUser(p);
+
+        // clear any existing meta nodes with the same key - we want it GONE!
+        user.data().clear(NodeMatcher.metaKey(this.getTopLevelMetaKey() + aspenMetaKey.getKey()));
+
+        // save!
+        LPapi.getUserManager().saveUser(user);
     }
 
     public void setMetaValue(Player p, AspenMetaKey aspenMetaKey, String value){
