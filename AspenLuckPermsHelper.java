@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 
 public class AspenLuckPermsHelper {
 
-    public static LuckPerms LPapi;
+    private static LuckPerms LPapi;
 
     private final String topLevelMetaKey;
 
@@ -25,6 +25,10 @@ public class AspenLuckPermsHelper {
             LPapi = provider.getProvider();
             logger.info("LuckPerms dependency loaded!");
         }
+    }
+
+    public LuckPerms getLPapi() {
+        return LPapi;
     }
 
     public String getTopLevelMetaKey(){
