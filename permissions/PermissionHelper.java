@@ -1,19 +1,20 @@
 package net.mov51.periderm.paper.permissions;
 
+import net.mov51.periderm.paper.chat.AspenChatHelper;
 import net.mov51.periderm.paper.chat.PredefinedMessage;
 import org.bukkit.entity.Player;
-
-import static net.mov51.aspenprefix.AspenPrefix.chatHelper;
 
 public class PermissionHelper {
 
     private final String topLevelPermissionNode;
     private final PredefinedMessage defaultDenyMessage;
+    private final AspenChatHelper chatHelper;
 
 
-    public PermissionHelper(String topLevelPermissionNode, PredefinedMessage defaultDenyMessage){
+    public PermissionHelper(String topLevelPermissionNode, PredefinedMessage defaultDenyMessage, AspenChatHelper chatHelper){
         this.topLevelPermissionNode = topLevelPermissionNode;
         this.defaultDenyMessage = defaultDenyMessage;
+        this.chatHelper = chatHelper;
     }
 
     public boolean hasPermission(Player p, Perm perm, boolean silent){
