@@ -1,7 +1,7 @@
 package net.mov51.periderm.permissions;
 
-import net.mov51.periderm.paper.chat.AspenChatHelper;
-import net.mov51.periderm.paper.chat.PredefinedMessage;
+import net.mov51.periderm.chat.AspenChatHelper;
+import net.mov51.periderm.chat.PredefinedMessage;
 import org.bukkit.entity.Player;
 
 public class PermissionHelper {

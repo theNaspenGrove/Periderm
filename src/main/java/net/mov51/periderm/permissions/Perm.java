@@ -1,6 +1,6 @@
 package net.mov51.periderm.permissions;
 
-import net.mov51.periderm.paper.chat.PredefinedMessage;
+import net.mov51.periderm.chat.PredefinedMessage;
 
 public class Perm {
     private final String permissionNode;
