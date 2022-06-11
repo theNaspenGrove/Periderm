@@ -1,4 +1,4 @@
-package net.mov51.periderm.paper.permissions;
+package net.mov51.periderm.permissions;
 
 import net.mov51.periderm.paper.chat.AspenChatHelper;
 import net.mov51.periderm.paper.chat.PredefinedMessage;

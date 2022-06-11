@@ -1,4 +1,4 @@
-package net.mov51.periderm.luckperms;
+package net.mov51.periderm;
 
 import net.luckperms.api.LuckPerms;
 import net.luckperms.api.cacheddata.CachedMetaData;

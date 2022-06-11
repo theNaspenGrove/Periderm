@@ -1,4 +1,4 @@
-package net.mov51.periderm.paper.helpers;
+package net.mov51.periderm.helpers;
 
 import java.util.ArrayList;
 import java.util.Collections;

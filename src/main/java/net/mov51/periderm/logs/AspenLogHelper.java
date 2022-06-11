@@ -1,4 +1,4 @@
-package net.mov51.periderm.paper.logs;
+package net.mov51.periderm.logs;
 
 import java.util.ArrayList;
 import java.util.logging.Level;
