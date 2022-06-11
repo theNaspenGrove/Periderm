@@ -34,4 +34,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: ${{ env.name }}
-        path: ${{ github.workspace }}/Periderm/Periderm/target/*.jar
+        path: /home/runner/work/Periderm/Periderm/target/*.jar
