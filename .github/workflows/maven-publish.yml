@@ -6,8 +6,8 @@ name: Maven Package
 on:
   release:
     types: [created]
-    push:
-      branches: [ "Unify" ]
+  push:
+    branches: [ "Unify" ]
 
 jobs:
   build:
