@@ -33,5 +33,5 @@ jobs:
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v3
       with:
-        name: ${{ env.name }}
+        name: ${{ env.name }}-Unified
         path: /home/runner/work/Periderm/Periderm/target/*.jar
