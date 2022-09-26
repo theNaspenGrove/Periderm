@@ -1,0 +1,8 @@
+name: Periderm
+version: ${project.version}
+main: net.mov51.periderm.Periderm
+api-version: 1.17
+prefix: Periderm
+authors: [mov51]
+website: mov51.net
+softdepend: [LuckPerms]
