@@ -3,6 +3,7 @@ name: Maven Artifact
 on:
   push:
     branches: [ "Unify" ]
+  workflow_dispatch:
 
 jobs:
   build:
