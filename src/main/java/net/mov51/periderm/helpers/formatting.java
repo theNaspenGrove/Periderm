@@ -9,7 +9,6 @@ public class formatting {
     public static String arrayListStringToString(ArrayList<String> array) {
         StringBuilder string = new StringBuilder();
         int size = array.size();
-        if (size > 1) {
             AtomicInteger i = new AtomicInteger();
             array.forEach(arrayString -> {
                 if (i.get() != size -1) {
@@ -19,8 +18,6 @@ public class formatting {
                 }
                 i.getAndIncrement();
             });
-
-        }
         return string.toString();
     }
 
