@@ -2,27 +2,27 @@ package net.mov51.periderm.permissions;
 
 import net.mov51.periderm.chat.PredefinedMessage;
 
-public class Perm {
+public class PermItem {
     private final String permissionNode;
     private final PredefinedMessage denyMessage;
     private final String command;
     private final String commandHelp;
 
-    public Perm(String permissionNode, PredefinedMessage denyMessage, String command, String commandHelp){
+    public PermItem(String permissionNode, PredefinedMessage denyMessage, String command, String commandHelp){
         this.permissionNode = permissionNode;
         this.denyMessage = denyMessage;
         this.command = command;
         this.commandHelp = commandHelp;
     }
 
-    public Perm(String permissionNode, PredefinedMessage denyMessage, String command){
+    public PermItem(String permissionNode, PredefinedMessage denyMessage, String command){
         this.permissionNode = permissionNode;
         this.denyMessage = denyMessage;
         this.command = command;
         this.commandHelp = null;
     }
 
-    public Perm(String permissionNode){
+    public PermItem(String permissionNode){
         this.permissionNode = permissionNode;
         this.denyMessage = null;
         this.command = null;

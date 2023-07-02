@@ -1,4 +1,4 @@
-package net.mov51.periderm.logs;
+package net.mov51.periderm.helpers;
 
 import java.util.ArrayList;
 

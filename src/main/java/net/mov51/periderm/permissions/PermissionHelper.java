@@ -17,7 +17,7 @@ public class PermissionHelper {
         this.chatHelper = chatHelper;
     }
 
-    public boolean hasPermission(Player p, Perm perm, boolean silent){
+    public boolean hasPermission(Player p, PermItem perm, boolean silent){
         if(p.hasPermission(topLevelPermissionNode + perm.getPermissionNode())){
             return true;
         }
@@ -28,7 +28,7 @@ public class PermissionHelper {
         return false;
     }
 
-    public boolean hasPermission(Player p, Perm perm){
+    public boolean hasPermission(Player p, PermItem perm){
         return hasPermission(p,perm,false);
 
     }
