@@ -1,4 +1,4 @@
-package net.mov51.periderm;
+package net.mov51.periderm.helpers;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -6,7 +6,7 @@ import org.bukkit.World;
 
 import java.util.Objects;
 
-public class Locations {
+public class LocationHelper {
     public static String LocationToString(Location l){
         String world = Objects.requireNonNull(l.getWorld()).getName();
         String x = String.valueOf(l.getX());
