@@ -1,8 +1,8 @@
 name: Periderm
 version: ${project.version}
-main: net.mov51.periderm.Periderm
+main: mov.naspen.periderm.Periderm
 api-version: 1.17
 prefix: Periderm
-authors: [mov51]
-website: mov51.net
+authors: [Natalie Trinket]
+website: naspen.mov
 softdepend: [LuckPerms]

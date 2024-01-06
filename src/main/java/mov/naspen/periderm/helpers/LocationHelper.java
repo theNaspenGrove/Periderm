@@ -1,4 +1,4 @@
-package net.mov51.periderm.helpers;
+package mov.naspen.periderm.helpers;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;

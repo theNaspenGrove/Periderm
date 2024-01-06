@@ -1,4 +1,4 @@
-package net.mov51.periderm.loging;
+package mov.naspen.periderm.loging;
 
 import net.mov51.periderm.configuration.ConfigHelper;
 

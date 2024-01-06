@@ -1,4 +1,4 @@
-package net.mov51.periderm.chat;
+package mov.naspen.periderm.chat;
 
 import net.kyori.adventure.text.TextComponent;
 

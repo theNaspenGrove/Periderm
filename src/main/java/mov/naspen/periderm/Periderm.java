@@ -1,4 +1,4 @@
-package net.mov51.periderm;
+package mov.naspen.periderm;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
