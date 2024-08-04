@@ -9,6 +9,7 @@ import net.luckperms.api.node.types.MetaNode;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.RegisteredServiceProvider;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.logging.Logger;
 
@@ -35,7 +36,7 @@ public class AspenLuckPermsHelper {
         return this.topLevelMetaKey + "_";
     }
 
-    public String getMetaValue(Player p, AspenMetaKey aspenMetaKey){
+    public @Nullable String getMetaValue(Player p, AspenMetaKey aspenMetaKey){
         // obtain CachedMetaData - the easiest way is via the PlayerAdapter
         // of course, you can get it via a User too if the player is offline.
         CachedMetaData metaData = LPapi.getPlayerAdapter(Player.class).getMetaData(p);
