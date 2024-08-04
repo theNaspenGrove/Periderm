@@ -8,8 +8,18 @@ public class AspenLogHelper {
     public Logger logger;
     public String LoggerName;
 
+    public AspenLogHelper(Logger logger, String LoggerName){
+        this.logger = logger;
+        this.LoggerName = " -- " + LoggerName;
+    }
+
+    public AspenLogHelper(Logger logger){
+        this.logger = logger;
+        this.LoggerName = "";
+    }
+
     public void sendLogInfo(String[] logs){
-        logger.log(Level.WARNING, " --" + LoggerName + " --");
+        logger.log(Level.WARNING, LoggerName + " Info --");
         for (String log : logs)
         {
             sendLogInfo(log);
@@ -21,7 +31,7 @@ public class AspenLogHelper {
     }
 
     public void sendLogWarning(String[] logs){
-        logger.log(Level.WARNING, " --" + LoggerName + " Warning--");
+        logger.log(Level.WARNING, LoggerName + " Warning --");
         for (String log : logs)
         {
             sendLogWarning(log);
@@ -34,7 +44,7 @@ public class AspenLogHelper {
 
 
     public void sendLogSevere(String[] logs){
-        logger.log(Level.WARNING, " --" + LoggerName + " Severe--");
+        logger.log(Level.WARNING, LoggerName + " Severe --");
         for (String log : logs)
         {
             sendLogSevere(log);
