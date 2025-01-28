@@ -10,9 +10,11 @@ public class Periderm extends JavaPlugin {
     @Override
     public void onEnable() {
         plugin = this;
-        coreProtectHelper = CoreProtectHelper.getInstance();
-        if(coreProtectHelper.isCoreProtectEnabled()){
-            this.getLogger().log(java.util.logging.Level.INFO,"CoreProtect integration with Periderm is enabled!");
+        if(this.getServer().getPluginManager().isPluginEnabled("CoreProtect")){
+            coreProtectHelper = CoreProtectHelper.getInstance();
+            if(coreProtectHelper.isCoreProtectEnabled()){
+                this.getLogger().log(java.util.logging.Level.INFO,"CoreProtect integration with Periderm is enabled!");
+            }
         }
         this.getLogger().log(java.util.logging.Level.INFO, "May the Periderm protect you!");
     }
