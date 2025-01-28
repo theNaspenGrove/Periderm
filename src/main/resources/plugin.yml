@@ -5,4 +5,4 @@ api-version: 1.17
 prefix: Periderm
 authors: [Natalie Trinket]
 website: naspen.mov
-softdepend: [LuckPerms]
+softdepend: [LuckPerms, CoreProtect]
